@@ -1,8 +1,11 @@
 package pe.edu.idat.demo_api_rest.service;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class FundamentosService implements IFundamentosService{
 
 
@@ -11,7 +14,7 @@ public class FundamentosService implements IFundamentosService{
         if(numero<2){
             return "No es PRIMO";
         }
-        for (i=0;i<=Math.sqrt(numero);i++){
+        for (int i=2;i<=Math.sqrt(numero);i++){
             if (numero%i == 0){
                 return "No es PRIMO";
             }
